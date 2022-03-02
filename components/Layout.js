@@ -22,6 +22,9 @@ import {
   InputGroup,
   InputLeftElement,
 } from "@chakra-ui/react";
+import { useColorMode } from "@chakra-ui/color-mode";
+import { MoonIcon, SunIcon } from "@chakra-ui/icons";
+
 import {
   FiHome,
   FiPieChart,
@@ -49,6 +52,7 @@ export default function Layout(props) {
   const [display, changeDisplay] = useState("hide");
   const [value, changeValue] = useState(1);
   const router = useRouter();
+  const { colorMode, toggleColorMode } = useColorMode();
 
   return (
     <Flex
@@ -208,6 +212,13 @@ export default function Layout(props) {
                   </Text>
                 </Link>
               </Flex>
+              <IconButton
+                mt={4}
+                aria-label="Toggle Mode"
+                onClick={toggleColorMode}
+              >
+                {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
+              </IconButton>
             </Flex>
           </Flex>
           {/* <Flex flexDir="column" alignItems="center" mb={10} mt={5}>
