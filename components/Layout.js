@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useRouter } from "next/router";
 import {
   Flex,
   Heading,
@@ -47,6 +48,8 @@ import DaoStat from "../components/Daostat";
 export default function Layout(props) {
   const [display, changeDisplay] = useState("hide");
   const [value, changeValue] = useState(1);
+  const router = useRouter();
+
   return (
     <Flex
       h={[null, null, "100vh"]}
@@ -85,38 +88,60 @@ export default function Layout(props) {
             >
               <Flex className="sidebar-items" mr={[2, 6, 0, 0, 0]}>
                 <Link display={["none", "none", "flex", "flex", "flex"]}>
-                  <Icon as={FiHome} fontSize="2xl" className="active-icon" />
+                  <Icon
+                    as={FiHome}
+                    fontSize="2xl"
+                    className={router.pathname == "/" ? "active-icon" : ""}
+                  />
                 </Link>
                 <Link
                   href="/"
                   _hover={{ textDecor: "none" }}
                   display={["flex", "flex", "none", "flex", "flex"]}
                 >
-                  <Text className="active">Overview</Text>
+                  <Text className={router.pathname == "/" ? "active" : ""}>
+                    Overview
+                  </Text>
                 </Link>
               </Flex>
               <Flex className="sidebar-items" mr={[2, 6, 0, 0, 0]}>
                 <Link display={["none", "none", "flex", "flex", "flex"]}>
-                  <Icon as={FiPieChart} fontSize="2xl" />
+                  <Icon
+                    as={FiPieChart}
+                    fontSize="2xl"
+                    className={router.pathname == "/daos" ? "active-icon" : ""}
+                  />
                 </Link>
                 <Link
                   href="/daos"
                   _hover={{ textDecor: "none" }}
                   display={["flex", "flex", "none", "flex", "flex"]}
                 >
-                  <Text>DAOs</Text>
+                  <Text className={router.pathname == "/daos" ? "active" : ""}>
+                    DAOs
+                  </Text>
                 </Link>
               </Flex>
               <Flex className="sidebar-items" mr={[2, 6, 0, 0, 0]}>
                 <Link display={["none", "none", "flex", "flex", "flex"]}>
-                  <Icon as={FaArrowsAlt} fontSize="2xl" />
+                  <Icon
+                    as={FaArrowsAlt}
+                    fontSize="2xl"
+                    className={
+                      router.pathname == "/catagories" ? "active-icon" : ""
+                    }
+                  />
                 </Link>
                 <Link
-                  href="/catagories"
+                  href="#"
                   _hover={{ textDecor: "none" }}
                   display={["flex", "flex", "none", "flex", "flex"]}
                 >
-                  <Text>Catagories</Text>
+                  <Text
+                    className={router.pathname == "/catagories" ? "active" : ""}
+                  >
+                    Catagories
+                  </Text>
                 </Link>
               </Flex>
               <Flex className="sidebar-items" mr={[2, 6, 0, 0, 0]}>
@@ -124,7 +149,7 @@ export default function Layout(props) {
                   <Icon as={FaRegClock} fontSize="2xl" />
                 </Link>
                 <Link
-                  href="/recent"
+                  href="#"
                   _hover={{ textDecor: "none" }}
                   display={["flex", "flex", "none", "flex", "flex"]}
                 >
@@ -136,7 +161,7 @@ export default function Layout(props) {
                   <Icon as={FaCompressAlt} fontSize="2xl" />
                 </Link>
                 <Link
-                  href="/comparision"
+                  href="#"
                   _hover={{ textDecor: "none" }}
                   display={["flex", "flex", "none", "flex", "flex"]}
                 >
@@ -145,26 +170,42 @@ export default function Layout(props) {
               </Flex>
               <Flex className="sidebar-items" mr={[2, 6, 0, 0, 0]}>
                 <Link display={["none", "none", "flex", "flex", "flex"]}>
-                  <Icon as={FaQuestionCircle} fontSize="2xl" />
+                  <Icon
+                    as={FaQuestionCircle}
+                    fontSize="2xl"
+                    className={router.pathname == "/about" ? "active-icon" : ""}
+                  />
                 </Link>
                 <Link
                   href="/about"
                   _hover={{ textDecor: "none" }}
                   display={["flex", "flex", "none", "flex", "flex"]}
                 >
-                  <Text>About</Text>
+                  <Text className={router.pathname == "/about" ? "active" : ""}>
+                    About
+                  </Text>
                 </Link>
               </Flex>
               <Flex className="sidebar-items" mr={[2, 6, 0, 0, 0]}>
                 <Link display={["none", "none", "flex", "flex", "flex"]}>
-                  <Icon as={FaMailBulk} fontSize="2xl" />
+                  <Icon
+                    as={FaMailBulk}
+                    fontSize="2xl"
+                    className={
+                      router.pathname == "/contact" ? "active-icon" : ""
+                    }
+                  />
                 </Link>
                 <Link
                   href="/contact"
                   _hover={{ textDecor: "none" }}
                   display={["flex", "flex", "none", "flex", "flex"]}
                 >
-                  <Text>Contact</Text>
+                  <Text
+                    className={router.pathname == "/contact" ? "active" : ""}
+                  >
+                    Contact
+                  </Text>
                 </Link>
               </Flex>
             </Flex>
