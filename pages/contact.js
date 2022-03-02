@@ -19,7 +19,8 @@ export default function Contact() {
           flexDir="column"
           overflow="auto"
           minH="50vh"
-          m="auto"
+          maxW="1200px"
+          mx="auto"
         >
           <Heading
             mt={50}

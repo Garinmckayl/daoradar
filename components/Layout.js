@@ -88,6 +88,7 @@ export default function Layout(props) {
                   <Icon as={FiHome} fontSize="2xl" className="active-icon" />
                 </Link>
                 <Link
+                  href="/"
                   _hover={{ textDecor: "none" }}
                   display={["flex", "flex", "none", "flex", "flex"]}
                 >
@@ -99,6 +100,7 @@ export default function Layout(props) {
                   <Icon as={FiPieChart} fontSize="2xl" />
                 </Link>
                 <Link
+                  href="/daos"
                   _hover={{ textDecor: "none" }}
                   display={["flex", "flex", "none", "flex", "flex"]}
                 >
@@ -110,6 +112,7 @@ export default function Layout(props) {
                   <Icon as={FaArrowsAlt} fontSize="2xl" />
                 </Link>
                 <Link
+                  href="/catagories"
                   _hover={{ textDecor: "none" }}
                   display={["flex", "flex", "none", "flex", "flex"]}
                 >
@@ -121,6 +124,7 @@ export default function Layout(props) {
                   <Icon as={FaRegClock} fontSize="2xl" />
                 </Link>
                 <Link
+                  href="/recent"
                   _hover={{ textDecor: "none" }}
                   display={["flex", "flex", "none", "flex", "flex"]}
                 >
@@ -132,6 +136,7 @@ export default function Layout(props) {
                   <Icon as={FaCompressAlt} fontSize="2xl" />
                 </Link>
                 <Link
+                  href="/comparision"
                   _hover={{ textDecor: "none" }}
                   display={["flex", "flex", "none", "flex", "flex"]}
                 >
@@ -143,6 +148,7 @@ export default function Layout(props) {
                   <Icon as={FaQuestionCircle} fontSize="2xl" />
                 </Link>
                 <Link
+                  href="/about"
                   _hover={{ textDecor: "none" }}
                   display={["flex", "flex", "none", "flex", "flex"]}
                 >
@@ -163,10 +169,10 @@ export default function Layout(props) {
               </Flex>
             </Flex>
           </Flex>
-          <Flex flexDir="column" alignItems="center" mb={10} mt={5}>
+          {/* <Flex flexDir="column" alignItems="center" mb={10} mt={5}>
             <Avatar my={2} src="avatar-1.jpg" />
             <Text textAlign="center">Nate</Text>
-          </Flex>
+          </Flex> */}
         </Flex>
       </Flex>
 

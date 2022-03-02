@@ -25,7 +25,7 @@ export default function DaoStat() {
             borderColor={"gray.800"}
             rounded={"lg"}
           >
-            <StatLabel>Collected Fees</StatLabel>
+            <StatLabel>TOTAL TREASURY LOKED</StatLabel>
             <StatNumber>£0.00</StatNumber>
             <StatHelpText>Feb 12 - Feb 28</StatHelpText>
           </Stat>
@@ -39,7 +39,7 @@ export default function DaoStat() {
             borderColor={"gray.800"}
             rounded={"lg"}
           >
-            <StatLabel>Collected Fees</StatLabel>
+            <StatLabel>Change (24h)</StatLabel>
             <StatNumber>£0.00</StatNumber>
             <StatHelpText>Feb 12 - Feb 28</StatHelpText>
           </Stat>
