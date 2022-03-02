@@ -146,91 +146,91 @@ export default function Daos() {
                       .00
                     </Td>
                   </Tr>
-                  {display == "show" && (
-                    <>
-                      <Tr>
-                        <Td>
-                          <Flex align="center">
-                            <Avatar
-                              size="sm"
-                              mr={2}
-                              src="https://s2.coinmarketcap.com/static/img/coins/64x64/1518.png"
-                            />
-                            <Flex flexDir="column">
-                              <Heading size="sm" letterSpacing="tight">
-                                Maker
-                              </Heading>
-                              <Text fontSize="sm" color="gray">
-                                Apr 12, 2021 at 9:40pm
-                              </Text>
-                            </Flex>
-                          </Flex>
-                        </Td>
-                        <Td>DeFi</Td>
-                        <Td isNumeric>+$2</Td>
-                        <Td isNumeric>
-                          <Text fontWeight="bold" display="inline-table">
-                            -$242
+                  {/* {display == "show" && (
+                    <> */}
+                  <Tr>
+                    <Td>
+                      <Flex align="center">
+                        <Avatar
+                          size="sm"
+                          mr={2}
+                          src="https://s2.coinmarketcap.com/static/img/coins/64x64/1518.png"
+                        />
+                        <Flex flexDir="column">
+                          <Heading size="sm" letterSpacing="tight">
+                            Maker
+                          </Heading>
+                          <Text fontSize="sm" color="gray">
+                            Apr 12, 2021 at 9:40pm
                           </Text>
-                          .00
-                        </Td>
-                      </Tr>
-                      <Tr>
-                        <Td>
-                          <Flex align="center">
-                            <Avatar
-                              size="sm"
-                              mr={2}
-                              src="https://s2.coinmarketcap.com/static/img/coins/64x64/6538.png"
-                            />
-                            <Flex flexDir="column">
-                              <Heading size="sm" letterSpacing="tight">
-                                Curve
-                              </Heading>
-                              <Text fontSize="sm" color="gray">
-                                Apr 10, 2021 at 2:10pm
-                              </Text>
-                            </Flex>
-                          </Flex>
-                        </Td>
-                        <Td>DeFi</Td>
-                        <Td isNumeric>+$23</Td>
-                        <Td isNumeric>
-                          <Text fontWeight="bold" display="inline-table">
-                            -$32
+                        </Flex>
+                      </Flex>
+                    </Td>
+                    <Td>DeFi</Td>
+                    <Td isNumeric>+$2</Td>
+                    <Td isNumeric>
+                      <Text fontWeight="bold" display="inline-table">
+                        -$242
+                      </Text>
+                      .00
+                    </Td>
+                  </Tr>
+                  <Tr>
+                    <Td>
+                      <Flex align="center">
+                        <Avatar
+                          size="sm"
+                          mr={2}
+                          src="https://s2.coinmarketcap.com/static/img/coins/64x64/6538.png"
+                        />
+                        <Flex flexDir="column">
+                          <Heading size="sm" letterSpacing="tight">
+                            Curve
+                          </Heading>
+                          <Text fontSize="sm" color="gray">
+                            Apr 10, 2021 at 2:10pm
                           </Text>
-                          .00
-                        </Td>
-                      </Tr>
-                      <Tr>
-                        <Td>
-                          <Flex align="center">
-                            <Avatar
-                              size="sm"
-                              mr={2}
-                              src="https://s2.coinmarketcap.com/static/img/coins/64x64/131.png"
-                            />
-                            <Flex flexDir="column">
-                              <Heading size="sm" letterSpacing="tight">
-                                Dash
-                              </Heading>
-                              <Text fontSize="sm" color="gray">
-                                Apr 7, 2021 at 9:03am
-                              </Text>
-                            </Flex>
-                          </Flex>
-                        </Td>
-                        <Td>Social Media</Td>
-                        <Td isNumeric>+$4</Td>
-                        <Td isNumeric>
-                          <Text fontWeight="bold" display="inline-table">
-                            -$112
+                        </Flex>
+                      </Flex>
+                    </Td>
+                    <Td>DeFi</Td>
+                    <Td isNumeric>+$23</Td>
+                    <Td isNumeric>
+                      <Text fontWeight="bold" display="inline-table">
+                        -$32
+                      </Text>
+                      .00
+                    </Td>
+                  </Tr>
+                  <Tr>
+                    <Td>
+                      <Flex align="center">
+                        <Avatar
+                          size="sm"
+                          mr={2}
+                          src="https://s2.coinmarketcap.com/static/img/coins/64x64/131.png"
+                        />
+                        <Flex flexDir="column">
+                          <Heading size="sm" letterSpacing="tight">
+                            Dash
+                          </Heading>
+                          <Text fontSize="sm" color="gray">
+                            Apr 7, 2021 at 9:03am
                           </Text>
-                          .00
-                        </Td>
-                      </Tr>
-                    </>
-                  )}
+                        </Flex>
+                      </Flex>
+                    </Td>
+                    <Td>Social Media</Td>
+                    <Td isNumeric>+$4</Td>
+                    <Td isNumeric>
+                      <Text fontWeight="bold" display="inline-table">
+                        -$112
+                      </Text>
+                      .00
+                    </Td>
+                  </Tr>
+                  {/* </>
+                  )} */}
                 </Tbody>
               </Table>
             </Flex>

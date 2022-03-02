@@ -27,7 +27,7 @@ export default function DaoStat() {
           >
             <StatLabel>TOTAL TREASURY LOKED</StatLabel>
             <StatNumber>£0.00</StatNumber>
-            <StatHelpText>Feb 12 - Feb 28</StatHelpText>
+            {/* <StatHelpText>Feb 12 - Feb 28</StatHelpText> */}
           </Stat>
         </Flex>
         <Flex w="100%">
@@ -41,7 +41,7 @@ export default function DaoStat() {
           >
             <StatLabel>Change (24h)</StatLabel>
             <StatNumber>£0.00</StatNumber>
-            <StatHelpText>Feb 12 - Feb 28</StatHelpText>
+            {/* <StatHelpText>Feb 12 - Feb 28</StatHelpText> */}
           </Stat>
         </Flex>
       </Flex>

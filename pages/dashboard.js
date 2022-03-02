@@ -188,12 +188,12 @@ export default function Dashboard() {
         overflow="auto"
         minH="50vh"
       >
-        <Heading fontWeight="normal" mb={4} letterSpacing="tight">
+        {/* <Heading fontWeight="normal" mb={4} letterSpacing="tight">
           Welcome back,{" "}
           <Flex display="inline-flex" fontWeight="bold">
             Calvin
           </Flex>
-        </Heading>
+        </Heading> */}
         {/* <Text color="gray" fontSize="sm">
           My Balance
         </Text>

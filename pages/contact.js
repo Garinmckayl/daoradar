@@ -15,7 +15,7 @@ export default function Contact() {
       <Layout>
         <Flex
           w={["100%", "100%", "100%", "100%", "100%"]}
-          p="3%"
+          //   p="3%"
           flexDir="column"
           overflow="auto"
           minH="50vh"
