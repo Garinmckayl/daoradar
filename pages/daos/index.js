@@ -39,7 +39,7 @@ export default function Daos() {
           flexDir="column"
           overflow="auto"
           minH="50vh"
-          maxW="1200px"
+          //   maxW="1400px"
           mx="auto"
         >
           <Flex justifyContent="space-between" mt={8}>

@@ -32,7 +32,7 @@ export default function About() {
           flexDir="column"
           overflow="auto"
           minH="50vh"
-          maxW="1200px"
+          //   maxW="1200px"
           mx="auto"
         >
           <Heading

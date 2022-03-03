@@ -187,6 +187,8 @@ export default function Dashboard() {
         flexDir="column"
         overflow="auto"
         minH="50vh"
+        //   maxW="1200px"
+        mx="auto"
       >
         {/* <Heading fontWeight="normal" mb={4} letterSpacing="tight">
           Welcome back,{" "}

@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import Layout from "../components/Layout";
-import { Flex, Heading } from "@chakra-ui/react";
+import { Flex, Heading, Center } from "@chakra-ui/react";
 
 export default function Contact() {
   return (
@@ -31,12 +31,14 @@ export default function Contact() {
           >
             Contact Us
           </Heading>
-          <iframe
-            src="https://us4.list-manage.com/contact-form?u=a45ca27fcc08e4bed1fc56b51&form_id=5281af0ccb5217b698e205555387815a"
-            title="Contact us"
-            height="800"
-            width="1000"
-          ></iframe>
+          <Center py={12}>
+            <iframe
+              src="https://us4.list-manage.com/contact-form?u=a45ca27fcc08e4bed1fc56b51&form_id=5281af0ccb5217b698e205555387815a"
+              title="Contact us"
+              height="900"
+              width="1000"
+            ></iframe>
+          </Center>
         </Flex>
       </Layout>
     </div>
