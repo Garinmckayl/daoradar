@@ -35,7 +35,7 @@ export default function Daos() {
   const [daos, setDaos] = useState();
 
   useEffect(() => {
-    axios.get("https://daos.zealsham.repl.co/daos").then((response) => {
+    axios.get("https://daoproxyapi.herokuapp.com/daos").then((response) => {
       setDaos(response.data.data.coins);
       setLoading(false);
       console.log("daos", daos);

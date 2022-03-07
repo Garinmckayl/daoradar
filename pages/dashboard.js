@@ -237,38 +237,11 @@ export default function Dashboard() {
                 <Tr color="gray">
                   <Th>Name of DAO</Th>
                   <Th>Category</Th>
-                  <Th isNumeric>Membership</Th>
-                  <Th isNumeric>Treasury Balance</Th>
+                  <Th isNumeric>Price</Th>
+                  <Th isNumeric>Market Cap</Th>
                 </Tr>
               </Thead>
               <Tbody>
-                <Tr>
-                  <Td>
-                    <Flex align="center">
-                      <Avatar
-                        size="sm"
-                        mr={2}
-                        src="https://s2.coinmarketcap.com/static/img/coins/64x64/11221.png"
-                      />
-                      <Flex flexDir="column">
-                        <Heading size="sm" letterSpacing="tight">
-                          bitdao
-                        </Heading>
-                        <Text fontSize="sm" color="gray">
-                          Apr 24, 2021 at 1:40pm
-                        </Text>
-                      </Flex>
-                    </Flex>
-                  </Td>
-                  <Td>Electronic Devices</Td>
-                  <Td isNumeric>+$2</Td>
-                  <Td isNumeric>
-                    <Text fontWeight="bold" display="inline-table">
-                      $1,980,299,036
-                    </Text>
-                    .00
-                  </Td>
-                </Tr>
                 <Tr>
                   <Td>
                     <Flex align="center">
@@ -281,19 +254,15 @@ export default function Dashboard() {
                         <Heading size="sm" letterSpacing="tight">
                           Uniswap
                         </Heading>
-                        <Text fontSize="sm" color="gray">
-                          Apr 22, 2021 at 2:43pm
-                        </Text>
                       </Flex>
                     </Flex>
                   </Td>
                   <Td>DEX</Td>
-                  <Td isNumeric>+$23</Td>
+                  <Td isNumeric>$9.06</Td>
                   <Td isNumeric>
                     <Text fontWeight="bold" display="inline-table">
-                      -$32
+                      $6,216,688,130
                     </Text>
-                    .00
                   </Td>
                 </Tr>
                 <Tr>
@@ -308,77 +277,65 @@ export default function Dashboard() {
                         <Heading size="sm" letterSpacing="tight">
                           Aave
                         </Heading>
-                        <Text fontSize="sm" color="gray">
-                          Apr 13, 2021 at 11:23am
-                        </Text>
                       </Flex>
                     </Flex>
                   </Td>
                   <Td>DeFi</Td>
-                  <Td isNumeric>+$4</Td>
+                  <Td isNumeric>$124.97</Td>
                   <Td isNumeric>
                     <Text fontWeight="bold" display="inline-table">
-                      -$112
+                      $1,705,817,518
                     </Text>
-                    .00
+                  </Td>
+                </Tr>
+                <Tr>
+                  <Td>
+                    <Flex align="center">
+                      <Avatar
+                        size="sm"
+                        mr={2}
+                        src="https://s2.coinmarketcap.com/static/img/coins/64x64/1518.png"
+                      />
+                      <Flex flexDir="column">
+                        <Heading size="sm" letterSpacing="tight">
+                          Maker
+                        </Heading>
+                      </Flex>
+                    </Flex>
+                  </Td>
+                  <Td>DeFi</Td>
+                  <Td isNumeric>$1,857.48</Td>
+                  <Td isNumeric>
+                    <Text fontWeight="bold" display="inline-table">
+                      $1,799,728,978
+                    </Text>
+                  </Td>
+                </Tr>
+                <Tr>
+                  <Td>
+                    <Flex align="center">
+                      <Avatar
+                        size="sm"
+                        mr={2}
+                        src="https://s2.coinmarketcap.com/static/img/coins/64x64/6538.png"
+                      />
+                      <Flex flexDir="column">
+                        <Heading size="sm" letterSpacing="tight">
+                          Curve DAO Token CRV
+                        </Heading>
+                      </Flex>
+                    </Flex>
+                  </Td>
+                  <Td>DeFi</Td>
+                  <Td isNumeric>$2.26</Td>
+                  <Td isNumeric>
+                    <Text fontWeight="bold" display="inline-table">
+                      $1,028,539,244
+                    </Text>
                   </Td>
                 </Tr>
                 {display == "show" && (
                   <>
-                    <Tr>
-                      <Td>
-                        <Flex align="center">
-                          <Avatar
-                            size="sm"
-                            mr={2}
-                            src="https://s2.coinmarketcap.com/static/img/coins/64x64/1518.png"
-                          />
-                          <Flex flexDir="column">
-                            <Heading size="sm" letterSpacing="tight">
-                              Maker
-                            </Heading>
-                            <Text fontSize="sm" color="gray">
-                              Apr 12, 2021 at 9:40pm
-                            </Text>
-                          </Flex>
-                        </Flex>
-                      </Td>
-                      <Td>DeFi</Td>
-                      <Td isNumeric>+$2</Td>
-                      <Td isNumeric>
-                        <Text fontWeight="bold" display="inline-table">
-                          -$242
-                        </Text>
-                        .00
-                      </Td>
-                    </Tr>
-                    <Tr>
-                      <Td>
-                        <Flex align="center">
-                          <Avatar
-                            size="sm"
-                            mr={2}
-                            src="https://s2.coinmarketcap.com/static/img/coins/64x64/6538.png"
-                          />
-                          <Flex flexDir="column">
-                            <Heading size="sm" letterSpacing="tight">
-                              Curve
-                            </Heading>
-                            <Text fontSize="sm" color="gray">
-                              Apr 10, 2021 at 2:10pm
-                            </Text>
-                          </Flex>
-                        </Flex>
-                      </Td>
-                      <Td>DeFi</Td>
-                      <Td isNumeric>+$23</Td>
-                      <Td isNumeric>
-                        <Text fontWeight="bold" display="inline-table">
-                          -$32
-                        </Text>
-                        .00
-                      </Td>
-                    </Tr>
                     <Tr>
                       <Td>
                         <Flex align="center">
@@ -391,19 +348,130 @@ export default function Dashboard() {
                             <Heading size="sm" letterSpacing="tight">
                               Dash
                             </Heading>
-                            <Text fontSize="sm" color="gray">
-                              Apr 7, 2021 at 9:03am
-                            </Text>
                           </Flex>
                         </Flex>
                       </Td>
-                      <Td>Social Media</Td>
-                      <Td isNumeric>+$4</Td>
+                      <Td>mineable</Td>
+                      <Td isNumeric>$89.72</Td>
                       <Td isNumeric>
                         <Text fontWeight="bold" display="inline-table">
-                          -$112
+                          $954,674,800
                         </Text>
-                        .00
+                      </Td>
+                    </Tr>
+                    <Tr>
+                      <Td>
+                        <Flex align="center">
+                          <Avatar
+                            size="sm"
+                            mr={2}
+                            src="https://s2.coinmarketcap.com/static/img/coins/64x64/1168.png"
+                          />
+                          <Flex flexDir="column">
+                            <Heading size="sm" letterSpacing="tight">
+                              Decred
+                            </Heading>
+                          </Flex>
+                        </Flex>
+                      </Td>
+                      <Td>mineable</Td>
+                      <Td isNumeric>$55.54</Td>
+                      <Td isNumeric>
+                        <Text fontWeight="bold" display="inline-table">
+                          $766,536,398
+                        </Text>
+                      </Td>
+                    </Tr>
+                    <Tr>
+                      <Td>
+                        <Flex align="center">
+                          <Avatar
+                            size="sm"
+                            mr={2}
+                            src="https://s2.coinmarketcap.com/static/img/coins/64x64/5692.png"
+                          />
+                          <Flex flexDir="column">
+                            <Heading size="sm" letterSpacing="tight">
+                              Compound
+                            </Heading>
+                          </Flex>
+                        </Flex>
+                      </Td>
+                      <Td>DeFi</Td>
+                      <Td isNumeric>$109.88</Td>
+                      <Td isNumeric>
+                        <Text fontWeight="bold" display="inline-table">
+                          $725,740,547
+                        </Text>
+                      </Td>
+                    </Tr>
+                    <Tr>
+                      <Td>
+                        <Flex align="center">
+                          <Avatar
+                            size="sm"
+                            mr={2}
+                            src="https://s2.coinmarketcap.com/static/img/coins/64x64/11221.png"
+                          />
+                          <Flex flexDir="column">
+                            <Heading size="sm" letterSpacing="tight">
+                              bitdao
+                            </Heading>
+                          </Flex>
+                        </Flex>
+                      </Td>
+                      <Td>DAO</Td>
+                      <Td isNumeric>$1.14</Td>
+                      <Td isNumeric>
+                        <Text fontWeight="bold" display="inline-table">
+                          $668,420,640
+                        </Text>
+                      </Td>
+                    </Tr>
+                    <Tr>
+                      <Td>
+                        <Flex align="center">
+                          <Avatar
+                            size="sm"
+                            mr={2}
+                            src="https://s2.coinmarketcap.com/static/img/coins/64x64/5617.png"
+                          />
+                          <Flex flexDir="column">
+                            <Heading size="sm" letterSpacing="tight">
+                              UMA
+                            </Heading>
+                          </Flex>
+                        </Flex>
+                      </Td>
+                      <Td>DeFi</Td>
+                      <Td isNumeric>$9.12</Td>
+                      <Td isNumeric>
+                        <Text fontWeight="bold" display="inline-table">
+                          $596,295,550
+                        </Text>
+                      </Td>
+                    </Tr>
+                    <Tr>
+                      <Td>
+                        <Flex align="center">
+                          <Avatar
+                            size="sm"
+                            mr={2}
+                            src="https://s2.coinmarketcap.com/static/img/coins/64x64/9444.png"
+                          />
+                          <Flex flexDir="column">
+                            <Heading size="sm" letterSpacing="tight">
+                              Kyber Network Crystal v2
+                            </Heading>
+                          </Flex>
+                        </Flex>
+                      </Td>
+                      <Td>DeFi</Td>
+                      <Td isNumeric>$2.40</Td>
+                      <Td isNumeric>
+                        <Text fontWeight="bold" display="inline-table">
+                          $425,866,964
+                        </Text>
                       </Td>
                     </Tr>
                   </>
