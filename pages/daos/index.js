@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import Link from "next/link";
 import Head from "next/head";
 import { SiCheckmarx } from "react-icons/si";
 import Layout from "../../components/Layout";
@@ -140,76 +141,85 @@ export default function Daos() {
                       //   <h1>{dao.name}</h1>
                       //   <p>{dao.symbol}</p>
                       // </div>
-
-                      <Tr>
-                        <Td>
-                          <Flex align="center">
-                            <Avatar
-                              size="sm"
-                              mr={2}
-                              src="https://s2.coinmarketcap.com/static/img/coins/64x64/11221.png"
-                            />
-                            <Flex flexDir="column">
-                              <Heading size="sm" letterSpacing="tight">
-                                {dao.name}
-                              </Heading>
-                              <Text fontSize="sm" color="gray">
-                                Updated:{" "}
-                                {new Date(dao.last_updated).toLocaleDateString(
-                                  "en-us",
-                                  {
+                      <Link
+                        href={{
+                          pathname: "/daos/[dao]",
+                          query: { dao: dao.name, daoId: dao.id },
+                        }}
+                      >
+                        {/* <a> */}
+                        <Tr>
+                          <Td>
+                            <Flex align="center">
+                              <Avatar
+                                size="sm"
+                                mr={2}
+                                src={`https://s2.coinmarketcap.com/static/img/coins/64x64/${dao.id}.png`}
+                              />
+                              <Flex flexDir="column">
+                                <Heading size="sm" letterSpacing="tight">
+                                  {dao.name}
+                                </Heading>
+                                <Text fontSize="sm" color="gray">
+                                  Updated:{" "}
+                                  {new Date(
+                                    dao.last_updated
+                                  ).toLocaleDateString("en-us", {
                                     weekday: "long",
                                     year: "numeric",
                                     month: "short",
                                     day: "numeric",
-                                  }
-                                )}
-                              </Text>
+                                  })}
+                                </Text>
+                              </Flex>
                             </Flex>
-                          </Flex>
-                        </Td>
-                        <Td>{dao.tags[0]}</Td>
-                        <Td>
-                          $
-                          {dao.quote.USD.price
-                            .toFixed(2)
-                            .replace(/\d(?=(\d{3})+\.)/g, "$&,")}
-                        </Td>
-                        <Td>
-                          {dao.quote.USD.percent_change_24h < 0 ? (
-                            <Text display="inline-table" color="red.500">
-                              {/* <StatArrow type="decrease" />{" "} */}
-                              {dao.quote.USD.percent_change_24h}
-                            </Text>
-                          ) : (
-                            <Text display="inline-table" color="green.500">
-                              {/* <StatArrow type="increase" />{" "} */}
-                              {dao.quote.USD.percent_change_24h}
-                            </Text>
-                          )}
-                        </Td>
-                        <Td>{dao.symbol}</Td>
-                        <Td>{dao.platform ? dao.platform.name : "unknown"}</Td>
-                        <Td isNumeric>
-                          {dao.is_active ? (
-                            <Text display="inline-table" color="green.500">
-                              <SiCheckmarx />
-                            </Text>
-                          ) : (
-                            <Text display="inline-table" color="red.500">
-                              <FiXCircle />
-                            </Text>
-                          )}
-                        </Td>
-                        <Td isNumeric>
-                          <Text fontWeight="bold" display="inline-table">
+                          </Td>
+                          <Td>{dao.tags[0]}</Td>
+                          <Td>
                             $
-                            {dao.circulating_supply
+                            {dao.quote.USD.price
                               .toFixed(2)
                               .replace(/\d(?=(\d{3})+\.)/g, "$&,")}
-                          </Text>
-                        </Td>
-                      </Tr>
+                          </Td>
+                          <Td>
+                            {dao.quote.USD.percent_change_24h < 0 ? (
+                              <Text display="inline-table" color="red.500">
+                                {/* <StatArrow type="decrease" />{" "} */}
+                                {dao.quote.USD.percent_change_24h}
+                              </Text>
+                            ) : (
+                              <Text display="inline-table" color="green.500">
+                                {/* <StatArrow type="increase" />{" "} */}
+                                {dao.quote.USD.percent_change_24h}
+                              </Text>
+                            )}
+                          </Td>
+                          <Td>{dao.symbol}</Td>
+                          <Td>
+                            {dao.platform ? dao.platform.name : "unknown"}
+                          </Td>
+                          <Td isNumeric>
+                            {dao.is_active ? (
+                              <Text display="inline-table" color="green.500">
+                                <SiCheckmarx />
+                              </Text>
+                            ) : (
+                              <Text display="inline-table" color="red.500">
+                                <FiXCircle />
+                              </Text>
+                            )}
+                          </Td>
+                          <Td isNumeric>
+                            <Text fontWeight="bold" display="inline-table">
+                              $
+                              {dao.circulating_supply
+                                .toFixed(2)
+                                .replace(/\d(?=(\d{3})+\.)/g, "$&,")}
+                            </Text>
+                          </Td>
+                        </Tr>
+                        {/* </a> */}
+                      </Link>
                     ))}
 
                   {/* <Tr>
